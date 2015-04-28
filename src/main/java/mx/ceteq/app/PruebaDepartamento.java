@@ -25,7 +25,6 @@ public class PruebaDepartamento {
 		Session session = sessionFactory.getCurrentSession();
 		Transaction tx = session.beginTransaction();
 		Departamento d1 = new Departamento();
-		d1.setId(10);
 		d1.setNombre("Produccion");
 		session.save(d1);
 		tx.commit();
