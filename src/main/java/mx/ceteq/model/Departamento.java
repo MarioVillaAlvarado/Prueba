@@ -3,15 +3,18 @@ package mx.ceteq.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "DEPARTAMENTOS")
 public class Departamento {
-	
+
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "depGen")
+	@SequenceGenerator(name = "depGen", sequenceName = "DEP_SEQ", allocationSize =3)
 	@Column(name = "ID")
 	private int id;
 
