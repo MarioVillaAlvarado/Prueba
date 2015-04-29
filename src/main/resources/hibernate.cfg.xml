@@ -20,5 +20,6 @@
 		<property name="show_sql">true</property>
 		<property name="format_sql">true</property>
 		<mapping class="mx.ceteq.model.Departamento"/>
+		<mapping class="mx.ceteq.banco.model.Cuenta"/>
 	</session-factory>
 </hibernate-configuration>
